@@ -1,0 +1,50 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+textarea{
+    height: 200px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+input{
+    clear: left;
+}
+
+.thumbnail{
+    width: 200px;
+}
+
+.info_stock_id{
+    float: left;
+    width: 150px;
+    height: 150px;
+    padding-top: 100px;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.info_item{
+    width: 200px;
+    height: 250px;
+    margin-right: 20px;
+    float: left;
+}
+
+.info_end{
+    width: 50px;
+    height: 150px;
+    padding-top: 100px;
+    float: left;
+    text-align: center;
+}
+
+.info_wrapper{
+    clear: left;
+}
+
+.notice{
+    color: red;
+}

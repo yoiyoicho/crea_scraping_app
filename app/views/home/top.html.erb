@@ -1,0 +1,9 @@
+<h1>LINE VOOMを投稿しよう</h1>
+<div class="notice">
+    <%= flash[:notice] %>
+</div>
+<p>記事IDを入力してください</p>
+<%= form_tag("/home/scrape") do %>
+    <textarea name="article_ids"></textarea>
+    <input type="submit" value="送信">
+<% end %>

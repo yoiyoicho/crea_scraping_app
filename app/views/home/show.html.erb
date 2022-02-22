@@ -1,0 +1,27 @@
+<h1>ストック一覧</h1>
+<div class="notice">
+    <%= flash[:notice] %>
+</div>
+<% @stocks.each do |stock| %>
+    <div class="info_wrapper">
+        <div class="info_stock_id">
+            <%= "ストックID:" + stock.id.to_s %>
+            <%= button_to("DL", "/download/#{stock.id}", {method: "get"}) %>
+            <%= button_to("削除", "/destroy/#{stock.id}", {method: "post"}) %>
+        </div>
+        <% stock.infos.each_with_index do |info, i| %>
+            <% if i < 5 %>
+                 <div class="info_item">
+                    <p><%= info.title.slice(0..10) + "..." %></p>
+                    <img src="<%= info.image_url %>" class="thumbnail">
+                    <p><%= info.shorten_url %></p>
+                </div>
+            <% end %>
+            <% if i == 5 %>
+                <div class="info_end">
+                <p>……</p>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+<% end %>
